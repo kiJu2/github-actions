@@ -7,6 +7,7 @@ on:
 
 jobs:
   test:
+    name: test
     runs-on: ubuntu-latest # container로 변경해볼 것
 
     strategy:
