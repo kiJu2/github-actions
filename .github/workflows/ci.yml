@@ -10,9 +10,9 @@ jobs:
     name: test
     runs-on: ubuntu-latest # container로 변경해볼 것
 
-    # strategy:
-    #   matrix:
-    #     node-version: [20]
+    strategy:
+      matrix:
+        node-version: [20]
 
     env:
       CI: true
@@ -29,7 +29,7 @@ jobs:
       - name: Use Node 20
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
