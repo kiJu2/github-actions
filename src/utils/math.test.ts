@@ -3,7 +3,7 @@ import { add, subtract, multiply, divide } from './math';
 describe('Math 유틸리티 함수들', () => {
   describe('add 함수', () => {
     test('두 양수를 더해야 한다', () => {
-      expect(add(2, 3)).toBe(4);
+      expect(add(2, 3)).toBe(5);
       expect(add(10, 20)).toBe(30);
     });
 
